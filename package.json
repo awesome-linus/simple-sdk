@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "release": "tsc && esbuild dist/index.js --minify --allow-overwrite --outfile=dist/index.js",
+    "release:clear": "rm -fr dist/index.js && npm run release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
